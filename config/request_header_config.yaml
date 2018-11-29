@@ -1,0 +1,13 @@
+---
+domain: request_header
+descriptors:
+  - key: header_match
+    value: loginuser
+    rate_limit:
+      unit: second
+      requests_per_unit: 1
+  - key: header_match
+#    value: guest
+    rate_limit:
+      unit: second
+      requests_per_unit: 0

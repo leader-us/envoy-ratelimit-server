@@ -1,0 +1,19 @@
+domain: complex
+bucket: jcache
+descriptors:
+  - key: generic_key
+    value: 1
+    descriptors:
+      - key: remote_address
+        rate_limit:
+          unit: second
+          requests_per_unit: 1
+  - key: generic_key
+    value: 2
+    descriptors:
+      - key: remote_address
+        rate_limit:
+          unit: second
+          requests_per_unit: 10
+          
+          
